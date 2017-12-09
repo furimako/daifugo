@@ -1,5 +1,5 @@
-# Daifugo Application (console based)
-This is console based daifugo application.
+# Daifugo game program
+This is console based Daifugo game program.
 
 It is stronger than you thought, maybe.
 
