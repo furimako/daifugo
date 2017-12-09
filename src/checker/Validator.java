@@ -1,12 +1,13 @@
-package elements;
+package checker;
 
-import elements.card.CardHolder;
+import container.CardHolder;
+import container.Information;
 
 public class Validator {
 	public static boolean check(CardHolder hand, CardHolder playedCards, Information info) {
 		/* in case of pass */
 		if (playedCards.numOfCards() == 0) {
-			if (info.cardsInField.numOfCards() != 0) {
+			if (info.cardsInField().numOfCards() != 0) {
 				return true;
 			}
 			System.out.println("you cannot pass in your turn");
@@ -26,30 +27,30 @@ public class Validator {
 		}
 
 		//in case of NO card in field
-		if (info.cardsInField.numOfCards() == 0) {
+		if (info.cardsInField().numOfCards() == 0) {
 			return true;
 		}
 
 		//in case of cards in field
-		if (info.bind) {
-			if (!playedCards.hasSameSuits(info.cardsInField)) {
+		if (info.bind()) {
+			if (!playedCards.hasSameSuits(info.cardsInField())) {
 				System.out.println("the field is bound");
 				return false;
 			}
 		}
 
-		if (playedCards.numOfCards() != info.cardsInField.numOfCards()) {
+		if (playedCards.numOfCards() != info.cardsInField().numOfCards()) {
 			return false;
 		}
 
-		if (playedCards.isSequence() != info.cardsInField.isSequence()) {
+		if (playedCards.isSequence() != info.cardsInField().isSequence()) {
 			return false;
 		}
 
-		if (!info.revolution) {
-			return playedCards.highCard().power() > info.cardsInField.highCard().power();
+		if (!info.revolution()) {
+			return playedCards.highCard().power() > info.cardsInField().highCard().power();
 		} else {
-			return playedCards.highCard().power() < info.cardsInField.highCard().power();
+			return playedCards.highCard().power() < info.cardsInField().highCard().power();
 		}
 	}
 }

@@ -1,10 +1,10 @@
-package elements.player;
+package container;
 
 import algorithm.Algorithm;
 import algorithm.Computer;
 import algorithm.Human;
-import elements.Information;
-import elements.card.CardHolder;
+import enums.PlayerType;
+import enums.StateOfPlayer;
 
 public class Player {
 	private final PlayerType playerType;

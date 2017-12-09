@@ -1,4 +1,4 @@
-package elements.player;
+package enums;
 
 public enum StateOfPlayer {
 	PLAYING,

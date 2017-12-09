@@ -1,4 +1,4 @@
-package elements.card;
+package enums;
 
 public enum Suit {
 	SPADE('S', 3),

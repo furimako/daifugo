@@ -1,8 +1,6 @@
-package elements;
+package container;
 
-import elements.card.CardHolder;
-import elements.player.Player;
-import elements.player.StateOfPlayer;
+import enums.StateOfPlayer;
 
 import java.util.Map;
 

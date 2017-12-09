@@ -1,12 +1,10 @@
-package elements;
+package container;
 
-import elements.card.Card;
-import elements.card.CardHolder;
-import elements.card.Number;
-import elements.card.Suit;
-import elements.player.Player;
-import elements.player.PlayerType;
-import elements.player.StateOfPlayer;
+import checker.Validator;
+import enums.Number;
+import enums.Suit;
+import enums.PlayerType;
+import enums.StateOfPlayer;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

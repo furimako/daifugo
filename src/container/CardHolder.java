@@ -1,4 +1,7 @@
-package elements.card;
+package container;
+
+import enums.Number;
+import enums.Suit;
 
 import java.util.*;
 
