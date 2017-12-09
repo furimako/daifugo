@@ -18,3 +18,8 @@ It is stronger than you thought, maybe.
 
 ## Show Mode: on
 ![sample(show_on)](https://github.com/furimako/daifugo/blob/master/image/sample_image(show).png)
+
+## How to Run
+* Compile all [*.java] files with Java 8 or later
+* Put below commands on terminal
+  * `java Daifugo`
