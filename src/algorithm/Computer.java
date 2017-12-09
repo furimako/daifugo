@@ -1,8 +1,8 @@
 package algorithm;
 
-import elements.Information;
-import elements.card.CardHolder;
-import elements.card.Number;
+import container.Information;
+import container.CardHolder;
+import enums.Number;
 
 import java.util.ArrayList;
 import java.util.Arrays;

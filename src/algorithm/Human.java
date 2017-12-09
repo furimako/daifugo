@@ -1,11 +1,11 @@
 package algorithm;
 
-import elements.Information;
-import elements.Validator;
-import elements.card.Card;
-import elements.card.CardHolder;
-import elements.card.Number;
-import elements.card.Suit;
+import container.Information;
+import checker.Validator;
+import container.Card;
+import container.CardHolder;
+import enums.Number;
+import enums.Suit;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
