@@ -1,6 +1,7 @@
 package algorithm;
 
 import elements.Information;
+import elements.Validator;
 import elements.card.Card;
 import elements.card.CardHolder;
 import elements.card.Number;
@@ -26,9 +27,10 @@ public class Human implements Algorithm {
 
 	public CardHolder play(CardHolder hand, Information info) {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		System.out.print(info + "[your hands]\n" + hand + "\n\n");
+		System.out.print("\n" + info + "[your hands]\n" + hand + "\n\n");
 
 		String str;
+		CardHolder cardHolder = new CardHolder();
 
 		while (true) {
 			System.out.print("enter the cards you want to play (ex.D5 D6 D7, pass, etc.)\n > ");
@@ -38,22 +40,23 @@ public class Human implements Algorithm {
 
 				switch (str) {
 					case "pass":
-						return new CardHolder();
+						break;
 
 					default:
-						try {
-							return strToCards(str);
-
-						} catch (Exception e) {
-							System.out.println("please enter the cards correctly");
-							break;
-						}
+						cardHolder = strToCards(str);
+						break;
 				}
-			} catch (Exception e) {
-				System.out.println(e);
-			}
 
-			System.out.print("\n");
+				if (Validator.check(hand, cardHolder, info)) {
+					System.out.print("\n");
+					return cardHolder;
+				} else {
+					System.out.println("please enter the cards correctly");
+				}
+
+			} catch (Exception e) {
+				System.out.println("please enter the cards correctly");
+			}
 		}
 	}
 }

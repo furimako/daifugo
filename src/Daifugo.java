@@ -51,7 +51,7 @@ class Daifugo {
 			}
 		}
 
-		System.out.print("\n- LET THE DAIFUGO GAME BEGINS -\n");
+		System.out.print("\n- LET THE DAIFUGO GAME BEGINS -\n\n");
 		Field field = new Field(num_of_players, showMode);
 
 		// start the game

@@ -56,6 +56,22 @@ public class CardHolder {
 		return count;
 	}
 
+	public boolean contains(CardHolder cardHolder) {
+		for (Card cardTmp : cardHolder.cards) {
+			boolean findFlag = false;
+			for (Card card : cards) {
+				if (cardTmp.equals(card)) {
+					findFlag = true;
+				}
+			}
+
+			if (!findFlag) {
+				return false;
+			}
+		}
+		return true;
+	}
+
 	public boolean isNoneSequence() {
 		if (numOfCards() == 0) {
 			return false;

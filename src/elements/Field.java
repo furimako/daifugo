@@ -155,12 +155,12 @@ public class Field {
 		}
 
 		Information info;
-		CardHolder cards;
+		CardHolder playedCards;
 
 		while (true) {
 			info = new Information(playersInfo(), cardsInField, cardsPlayed, revolution, bind);
-			cards = player.play(info);
-			if (Validator.check(cards, info)) {
+			playedCards = player.play(info);
+			if (Validator.check(player.hand(), playedCards, info)) {
 				break;
 			}
 			System.out.println("please enter again");
@@ -168,10 +168,10 @@ public class Field {
 
 		// Update Field
 		CardHolder previousCards = cardsInField.clone();
-		player.hand().subtract(cards);
-		System.out.println(player + " played " + cards);
+		player.hand().subtract(playedCards);
+		System.out.println(player + " played " + playedCards);
 
-		if (cards.numOfCards() == 0) {
+		if (playedCards.numOfCards() == 0) {
 			//in case of pass
 			nextPlayer().setState(StateOfPlayer.PLAYING);
 			player.setState(StateOfPlayer.PASSED);
@@ -180,14 +180,14 @@ public class Field {
 			//in case of NOT pass
 			cardsPlayed.add(cardsInField);
 			cardsInField.clear();
-			cardsInField.add(cards);
+			cardsInField.add(playedCards);
 
-			if (cards.numOfCards() >= 4) {
+			if (playedCards.numOfCards() >= 4) {
 				switchRevolution();
 				System.out.println("Revoluiton!!");
 			}
 
-			if (cards.numOfCards(Number.EIGHT) >= 1) {
+			if (playedCards.numOfCards(Number.EIGHT) >= 1) {
 				//in case of 8
 				System.out.println("Yagiri!");
 
@@ -206,7 +206,7 @@ public class Field {
 			} else {
 				// in case of NOT 8
 
-				if (cards.hasSameSuits(previousCards)) {
+				if (playedCards.hasSameSuits(previousCards)) {
 					bind = true;
 				}
 				nextPlayer().setState(StateOfPlayer.PLAYING);
@@ -239,6 +239,12 @@ public class Field {
 	}
 
 	public void showRank() {
+		for(Player player:players){
+			if(player.getState() != StateOfPlayer.FINISHED){
+				winners.add(player);
+			}
+		}
+
 		String str = "";
 		int rank = 0;
 		for (Player player : winners) {
