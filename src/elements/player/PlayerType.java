@@ -1,4 +1,4 @@
-package main.elements.player;
+package elements.player;
 
 public enum PlayerType {
 	HUMAN,

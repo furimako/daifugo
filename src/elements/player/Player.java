@@ -1,10 +1,10 @@
-package main.elements.player;
+package elements.player;
 
-import main.algorithm.Algorithm;
-import main.algorithm.Computer;
-import main.algorithm.Human;
-import main.elements.Information;
-import main.elements.card.CardHolder;
+import algorithm.Algorithm;
+import algorithm.Computer;
+import algorithm.Human;
+import elements.Information;
+import elements.card.CardHolder;
 
 public class Player {
 	private final PlayerType playerType;

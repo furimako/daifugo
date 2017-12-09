@@ -1,12 +1,12 @@
-package main.elements;
+package elements;
 
-import main.elements.card.Card;
-import main.elements.card.CardHolder;
-import main.elements.card.Number;
-import main.elements.card.Suit;
-import main.elements.player.Player;
-import main.elements.player.PlayerType;
-import main.elements.player.StateOfPlayer;
+import elements.card.Card;
+import elements.card.CardHolder;
+import elements.card.Number;
+import elements.card.Suit;
+import elements.player.Player;
+import elements.player.PlayerType;
+import elements.player.StateOfPlayer;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

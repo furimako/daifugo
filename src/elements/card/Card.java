@@ -1,4 +1,4 @@
-package main.elements.card;
+package elements.card;
 
 public class Card implements Comparable<Card> {
 	private final Suit suit;

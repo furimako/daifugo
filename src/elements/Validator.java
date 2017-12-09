@@ -1,6 +1,6 @@
-package main.elements;
+package elements;
 
-import main.elements.card.CardHolder;
+import elements.card.CardHolder;
 
 public class Validator {
 	public static boolean check(CardHolder cardHolder, Information info) {

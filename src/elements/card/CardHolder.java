@@ -1,4 +1,4 @@
-package main.elements.card;
+package elements.card;
 
 import java.util.*;
 

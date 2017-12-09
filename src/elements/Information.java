@@ -1,11 +1,9 @@
-package main.elements;
+package elements;
 
-import main.elements.card.Card;
-import main.elements.card.CardHolder;
-import main.elements.player.Player;
-import main.elements.player.StateOfPlayer;
+import elements.card.CardHolder;
+import elements.player.Player;
+import elements.player.StateOfPlayer;
 
-import java.util.List;
 import java.util.Map;
 
 public class Information extends Field {

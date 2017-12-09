@@ -1,8 +1,8 @@
-package main.algorithm;
+package algorithm;
 
-import main.elements.Information;
-import main.elements.card.CardHolder;
-import main.elements.card.Number;
+import elements.Information;
+import elements.card.CardHolder;
+import elements.card.Number;
 
 import java.util.ArrayList;
 import java.util.Arrays;

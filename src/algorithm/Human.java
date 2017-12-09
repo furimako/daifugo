@@ -1,10 +1,10 @@
-package main.algorithm;
+package algorithm;
 
-import main.elements.Information;
-import main.elements.card.Card;
-import main.elements.card.CardHolder;
-import main.elements.card.Number;
-import main.elements.card.Suit;
+import elements.Information;
+import elements.card.Card;
+import elements.card.CardHolder;
+import elements.card.Number;
+import elements.card.Suit;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

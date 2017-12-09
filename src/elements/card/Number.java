@@ -1,4 +1,4 @@
-package main.elements.card;
+package elements.card;
 
 public enum Number {
 	THREE(3, 0),
