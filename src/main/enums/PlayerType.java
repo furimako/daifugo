@@ -1,4 +1,4 @@
-package main.enums;
+package enums;
 
 public enum PlayerType {
 	HUMAN,

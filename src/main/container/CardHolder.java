@@ -1,16 +1,22 @@
-package main.container;
+package container;
 
-import main.enums.Number;
-import main.enums.Suit;
+import enums.Number;
+import enums.Suit;
 
 import java.util.*;
 
-public class CardHolder {
+
+public class    CardHolder {
 
 	private List<Card> cards;
 
 	public CardHolder() {
 		cards = new ArrayList<>();
+	}
+
+	public CardHolder(container.Card card) {
+		cards = new ArrayList<>();
+		cards.add(card);
 	}
 
 	public List<Card> unsortedCards() {

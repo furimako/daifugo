@@ -1,10 +1,10 @@
-package main.container;
+package container;
 
-import main.checker.Validator;
-import main.enums.Number;
-import main.enums.Suit;
-import main.enums.PlayerType;
-import main.enums.StateOfPlayer;
+import checker.Validator;
+import enums.Number;
+import enums.Suit;
+import enums.PlayerType;
+import enums.StateOfPlayer;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

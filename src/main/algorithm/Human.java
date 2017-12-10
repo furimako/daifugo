@@ -1,11 +1,11 @@
-package main.algorithm;
+package algorithm;
 
-import main.container.Information;
-import main.checker.Validator;
-import main.container.Card;
-import main.container.CardHolder;
-import main.enums.Number;
-import main.enums.Suit;
+import checker.Validator;
+import container.Card;
+import container.CardHolder;
+import container.Information;
+import enums.Number;
+import enums.Suit;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

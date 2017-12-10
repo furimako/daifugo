@@ -1,7 +1,7 @@
-package main.container;
+package container;
 
-import main.enums.Number;
-import main.enums.Suit;
+import enums.Number;
+import enums.Suit;
 
 public class Card implements Comparable<Card> {
 	private final Suit suit;

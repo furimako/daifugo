@@ -1,7 +1,7 @@
-package main.algorithm;
+package algorithm;
 
-import main.container.Information;
-import main.container.CardHolder;
+import container.Information;
+import container.CardHolder;
 
 public interface Algorithm {
 	CardHolder play(CardHolder hand, Information info);
