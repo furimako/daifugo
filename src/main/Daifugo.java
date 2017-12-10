@@ -1,5 +1,6 @@
+package main;
 
-import container.Field;
+import main.container.Field;
 
 import java.io.IOException;
 import java.io.BufferedReader;

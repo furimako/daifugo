@@ -1,6 +1,6 @@
-package container;
+package main.container;
 
-import enums.StateOfPlayer;
+import main.enums.StateOfPlayer;
 
 import java.util.Map;
 

@@ -1,7 +1,7 @@
-package checker;
+package main.checker;
 
-import container.CardHolder;
-import container.Information;
+import main.container.CardHolder;
+import main.container.Information;
 
 public class Validator {
 	public static boolean check(CardHolder hand, CardHolder playedCards, Information info) {

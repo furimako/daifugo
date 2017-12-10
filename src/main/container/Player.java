@@ -1,10 +1,10 @@
-package container;
+package main.container;
 
-import algorithm.Algorithm;
-import algorithm.Computer;
-import algorithm.Human;
-import enums.PlayerType;
-import enums.StateOfPlayer;
+import main.algorithm.Algorithm;
+import main.algorithm.Computer;
+import main.algorithm.Human;
+import main.enums.PlayerType;
+import main.enums.StateOfPlayer;
 
 public class Player {
 	private final PlayerType playerType;

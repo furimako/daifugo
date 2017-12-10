@@ -1,4 +1,4 @@
-package enums;
+package main.enums;
 
 public enum Suit {
 	SPADE('S', 3),

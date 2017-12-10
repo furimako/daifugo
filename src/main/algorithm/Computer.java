@@ -1,8 +1,8 @@
-package algorithm;
+package main.algorithm;
 
-import container.Information;
-import container.CardHolder;
-import enums.Number;
+import main.container.Information;
+import main.container.CardHolder;
+import main.enums.Number;
 
 import java.util.ArrayList;
 import java.util.Arrays;

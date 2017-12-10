@@ -1,4 +1,4 @@
-package enums;
+package main.enums;
 
 public enum Number {
 	THREE(3, 0),

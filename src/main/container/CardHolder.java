@@ -1,7 +1,7 @@
-package container;
+package main.container;
 
-import enums.Number;
-import enums.Suit;
+import main.enums.Number;
+import main.enums.Suit;
 
 import java.util.*;
 
