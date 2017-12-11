@@ -65,6 +65,10 @@ public class Field {
 		this.showMode = showMode;
 	}
 
+	public void setBind(boolean boo) {
+		bind = boo;
+	}
+
 	private Player playingPlayer() {
 		for (Player player : players) {
 			if (player.getState() == StateOfPlayer.PLAYING) {
@@ -153,12 +157,12 @@ public class Field {
 		}
 
 		Information info;
-		CardHolder playedCards;
+		CardHolder playingCards;
 
 		while (true) {
 			info = new Information(playersInfo(), cardsInField, cardsPlayed, revolution, bind);
-			playedCards = player.play(info);
-			if (Validator.check(player.hand(), playedCards, info)) {
+			playingCards = player.play(info);
+			if (Validator.check(player.hand(), playingCards, info)) {
 				break;
 			}
 			System.out.println("please enter again");
@@ -166,10 +170,10 @@ public class Field {
 
 		// Update Field
 		CardHolder previousCards = cardsInField.clone();
-		player.hand().subtract(playedCards);
-		System.out.println(player + " played " + playedCards);
+		player.hand().subtract(playingCards);
+		System.out.println(player + " played " + playingCards);
 
-		if (playedCards.numOfCards() == 0) {
+		if (playingCards.numOfCards() == 0) {
 			//in case of pass
 			nextPlayer().setState(StateOfPlayer.PLAYING);
 			player.setState(StateOfPlayer.PASSED);
@@ -178,14 +182,14 @@ public class Field {
 			//in case of NOT pass
 			cardsPlayed.add(cardsInField);
 			cardsInField.clear();
-			cardsInField.add(playedCards);
+			cardsInField.add(playingCards);
 
-			if (playedCards.numOfCards() >= 4) {
+			if (playingCards.numOfCards() >= 4) {
 				switchRevolution();
 				System.out.println("Revoluiton!!");
 			}
 
-			if (playedCards.numOfCards(Number.EIGHT) >= 1) {
+			if (playingCards.numOfCards(Number.EIGHT) >= 1) {
 				//in case of 8
 				System.out.println("Yagiri!");
 
@@ -204,7 +208,7 @@ public class Field {
 			} else {
 				// in case of NOT 8
 
-				if (playedCards.hasSameSuits(previousCards)) {
+				if (playingCards.hasSameSuits(previousCards)) {
 					bind = true;
 				}
 				nextPlayer().setState(StateOfPlayer.PLAYING);
@@ -237,8 +241,8 @@ public class Field {
 	}
 
 	public void showRank() {
-		for(Player player:players){
-			if(player.getState() != StateOfPlayer.FINISHED){
+		for (Player player : players) {
+			if (player.getState() != StateOfPlayer.FINISHED) {
 				winners.add(player);
 			}
 		}

@@ -4,9 +4,9 @@ import container.CardHolder;
 import container.Information;
 
 public class Validator {
-	public static boolean check(CardHolder hand, CardHolder playedCards, Information info) {
+	public static boolean check(CardHolder hand, CardHolder playingCards, Information info) {
 		/* in case of pass */
-		if (playedCards.numOfCards() == 0) {
+		if (playingCards.numOfCards() == 0) {
 			if (info.cardsInField().numOfCards() != 0) {
 				return true;
 			}
@@ -16,12 +16,12 @@ public class Validator {
 
 		/* in case of NOT pass */
 		// hand check
-		if (!hand.contains(playedCards)) {
+		if (!hand.contains(playingCards)) {
 			System.out.println("you don't have the cards");
 			return false;
 		}
 
-		if (!playedCards.isNoneSequence() && !playedCards.isSequence()) {
+		if (!playingCards.isNoneSequence() && !playingCards.isSequence()) {
 			System.out.println("it's not a correct choice");
 			return false;
 		}
@@ -33,24 +33,24 @@ public class Validator {
 
 		//in case of cards in field
 		if (info.bind()) {
-			if (!playedCards.hasSameSuits(info.cardsInField())) {
+			if (!playingCards.hasSameSuits(info.cardsInField())) {
 				System.out.println("the field is bound");
 				return false;
 			}
 		}
 
-		if (playedCards.numOfCards() != info.cardsInField().numOfCards()) {
+		if (playingCards.numOfCards() != info.cardsInField().numOfCards()) {
 			return false;
 		}
 
-		if (playedCards.isSequence() != info.cardsInField().isSequence()) {
+		if (playingCards.isSequence() != info.cardsInField().isSequence()) {
 			return false;
 		}
 
 		if (!info.revolution()) {
-			return playedCards.highCard().power() > info.cardsInField().highCard().power();
+			return playingCards.highCard().power() > info.cardsInField().highCard().power();
 		} else {
-			return playedCards.highCard().power() < info.cardsInField().highCard().power();
+			return playingCards.highCard().power() < info.cardsInField().highCard().power();
 		}
 	}
 }

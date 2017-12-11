@@ -20,6 +20,10 @@ public class Information extends Field {
 		return cardsInField;
 	}
 
+	public void setCardsInField(CardHolder cardHolder) {
+		cardsInField = cardHolder;
+	}
+
 	public CardHolder cardsPlayed() {
 		return cardsPlayed;
 	}
