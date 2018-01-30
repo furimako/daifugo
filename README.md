@@ -14,10 +14,10 @@ It is stronger than you thought, maybe.
   * Playing 4 cards of more causes a revolution, which makes the strength of cards reversed until the end of the game.
 
 ## Show Mode: off
-![sample(show_off)](https://github.com/furimako/daifugo/blob/master/image/sample_image.png)
+![sample(show_off)](https://github.com/FullyHatter/daifugo/blob/master/image/sample_image.png)
 
 ## Show Mode: on
-![sample(show_on)](https://github.com/furimako/daifugo/blob/master/image/sample_image(show).png)
+![sample(show_on)](https://github.com/FullyHatter/daifugo/blob/master/image/sample_image(show).png)
 
 ## How to Run
 * Compile all [*.java] files with Java 8 or later
