@@ -1,5 +1,5 @@
 # Daifugo
-This is Console-based Daifugo game program.  
+This is console-based Daifugo game program.  
 The program is stronger than you thought, maybe.
 
 ## How to Play
