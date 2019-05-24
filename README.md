@@ -2,18 +2,6 @@
 This is console-based Daifugo game program.  
 The program is stronger than you thought, maybe.
 
-## How to Play
-1. install Git & Java(JDK)
-    - Java version should be 8 or later.
-1. execute below commands in terminal
-    ```bash
-    git clone https://github.com/furimako/daifugo.git
-    cd daifugo
-    bash scripts/init.sh
-    cd out
-    java main/Daifugo
-    ```
-
 ## What is Daifugo?
 > Daifugo (大富豪, Grand Millionaire) or Daihinmin (大貧民, Extremely Poor) is a Japanese card game for three or more players played with a standard 52-card pack. The objective of the game is to get rid of all the cards one has as fast as possible by playing progressively stronger cards than those of the previous player. The winner is called the daifugō (the grand millionaire) earning various advantages in the next round, and the last person is called the daihinmin (the extreme indigent). In that following round, winners can exchange their one or more unnecessary cards for advantageous ones that losers have.
 
@@ -30,6 +18,18 @@ In this program, there are some special rules described in below.
 
 * Revolution
   * Playing 4 cards or more causes a revolution, which makes the strength of cards reversed until the end of the game.
+
+## How to Play
+1. install Git & Java(JDK)
+    - Java version should be 8 or later.
+1. execute below commands in terminal
+    ```bash
+    git clone https://github.com/furimako/daifugo.git
+    cd daifugo
+    bash scripts/init.sh
+    cd out
+    java main/Daifugo
+    ```
 
 ## Sample Images
 ### Show Mode: off
